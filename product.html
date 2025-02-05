@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายละเอียดสินค้า</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product.css">
+
+
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <a href="index.html" class="logo">🚴 BikeShop</a>
+    </nav>
+</header>
+
+<!-- 🔄 Loading Screen -->
+<div id="loading-screen" class="loading">
+    <p>🔄 กำลังโหลดข้อมูลสินค้า...</p>
+</div>
+
+<!-- 📌 รายละเอียดสินค้า -->
+<section class="product-detail">
+    <div class="product-image">
+        <img id="productImage" src="" alt="รูปสินค้า">
+    </div>
+    <div class="product-info">
+        <h2 id="productTitle"></h2>
+        <p id="productPrice"></p>
+
+        <!-- 🎨 ตัวเลือกสีสินค้า -->
+        <div id="colorOptions"></div>
+
+        <!-- 🔘 แท็บข้อมูล -->
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab(event, 'description')">📜 รายละเอียด</button>
+            <button class="tab-button" onclick="openTab(event, 'reviews')">⭐ รีวิว</button>
+            <button class="tab-button" onclick="openTab(event, 'extra')">ℹ️ ข้อมูลเพิ่มเติม</button>
+        </div>
+
+        <!-- 🔹 เนื้อหาแท็บ -->
+        <div id="description" class="tab-content active">
+            <p id="productDescription"></p>
+        </div>
+        <div id="reviews" class="tab-content">
+            <p>⭐ ยังไม่มีรีวิวสำหรับสินค้านี้</p>
+        </div>
+        <div id="extra" class="tab-content">
+            <p>ℹ️ สามารถติดต่อร้านค้าเพื่อสอบถามข้อมูลเพิ่มเติม</p>
+        </div>
+
+        <button class="btn" onclick="goBack()">🔙 กลับ</button>
+    </div>
+</section>
+
+<footer>
+    <p>📍 ร้านจักรยาน | ติดต่อ: 099-999-9999</p>
+</footer>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

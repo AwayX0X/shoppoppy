@@ -1,0 +1,128 @@
+/* 🔹 หมวดหมู่สินค้า */
+.category-selection {
+    text-align: center;
+    margin: 20px;
+}
+
+.category-selection select {
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* 🔹 รายการสินค้า */
+.product-list {
+    text-align: center;
+    padding: 20px;
+}
+
+.product {
+    display: inline-block;
+    width: 250px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background: white;
+	-webkit-box-shadow: inset 0px 0px 32px 6px rgba(115,109,115,0.53);
+	-moz-box-shadow: inset 0px 0px 32px 6px rgba(115,109,115,0.53);
+	box-shadow: inset 0px 0px 32px 6px rgba(115,109,115,0.53);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 10px;
+	-webkit-box-shadow: inset 0px 0px 32px 6px rgba(115,109,115,0.53);
+	-moz-box-shadow: inset 0px 0px 32px 6px rgba(115,109,115,0.53);
+	box-shadow: inset 0px 0px 32px 6px rgba(115,109,115,0.53);
+
+}
+
+.product h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+/* กล่องเลือกหมวดหมู่ */
+.select-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #e0e5ec;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
+    max-width: 300px;
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* สไตล์ของ label */
+.select-container label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* สไตล์ของ Select Box */
+#categorySelect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #e0e5ec;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
+    max-width: 300px;
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* เมื่อโฟกัสที่ Select Box */
+#categorySelect:focus {
+    box-shadow: inset 2px 2px 5px #bebebe, inset -2px -2px 5px #ffffff;
+}
+
+/* Responsive: ปรับขนาดสำหรับมือถือ */
+@media screen and (max-width: 600px) {
+    .select-container {
+        max-width: 90%;
+    }
+}
+/* สไตล์กล่องเลือก */
+.custom-select {
+    position: relative;
+    width: 200px;
+    font-family: Arial, sans-serif;
+}
+
+/* ปุ่มที่ใช้แสดงค่าที่เลือก */
+.selected {
+    background: white;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+/* เปลี่ยนสีเมื่อคลิก */
+.selected:hover {
+    background: #f0f0f0;
+}

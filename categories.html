@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หมวดหมู่สินค้า</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="categories.css">
+
+
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">🚴‍♂️ ร้านจักรยานออนไลน์</div>
+        <ul class="nav-links">
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="categories.html">หมวดหมู่สินค้า</a></li>
+            <li><a href="contech.html">ติดต่อเรา</a></li>
+        </ul>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    </nav>
+</header>
+
+<select id="categorySelect" onchange="changeCategory()">
+    <!-- ตัวเลือกหมวดหมู่จะถูกโหลดจาก `config.js` ผ่าน `script.js` -->
+</select>
+
+
+
+
+<!-- 🛒 รายการสินค้า -->
+<section class="product-list">
+    <h2>🛒 สินค้าในหมวดหมู่</h2>
+    <div id="product-container"></div>
+</section>
+
+<footer>
+    <p>📍 ร้านจักรยาน | ติดต่อ: 085-549-6843</p>
+</footer>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

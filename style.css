@@ -1,0 +1,226 @@
+/* ======= 🌟 ปรับ UI ให้ทันสมัยขึ้น พร้อม Animation ======= */
+
+/* 🔹 ตั้งค่าพื้นฐาน */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f9;
+    color: #333;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    max-width: 1200px;
+    margin: auto;
+    background-image: url(https://media.discordapp.net/attachments/1336363070510989393/1336714690512027738/pexels-nietjuhart-1445416.jpg?ex=67a4d011&is=67a37e91&hm=008bcbae1eed7533548480615897902060ca2fd2a45e39ab822b0398237897d3&=&format=webp&width=993&height=681);
+    background-repeat: repeat-x; 
+}
+
+/* 🔹 Navbar แบบโปร่งแสง พร้อมกรอบเงา */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: rgba(0, 123, 255, 0.9);
+    backdrop-filter: blur(10px);
+    color: white;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    z-index: 1000;
+    transition: background 0.3s ease-in-out;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 15px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffd700;
+    transform: scale(1.05);
+}
+
+/* 🔹 จัดตำแหน่ง categorySelect ให้อยู่ตรงกลาง */
+.category-selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.category-selection select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+/* ทำให้สินค้าอยู่ตรงกลาง */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 100%;
+	-webkit-box-shadow: inset 0px 0px 9px 2px rgba(148,148,148,0.7);
+	-moz-box-shadow: inset 0px 0px 9px 2px rgba(148,148,148,0.7);
+	box-shadow: inset 0px 0px 9px 2px rgba(148,148,148,0.7);
+	
+}
+
+/* สไตล์ของสินค้า */
+
+/* สไตล์ของจำนวนสินค้า */
+/* คอนเทนเนอร์ของจำนวนสินค้า */
+/* คอนเทนเนอร์ของจำนวนสินค้า */
+.product-count-container {
+    text-align: center;
+    margin-bottom: 27px; /* เพิ่มระยะห่างจากรายการสินค้า */
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+
+
+.product h4 {
+    margin: 10px 0 5px;
+    font-size: 16px;
+}
+
+.product .price {
+    font-size: 14px;
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* 🔹 Footer แบบโมเดิร์น มีกรอบและเงา */
+footer {
+    background: #222;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    border-radius: 12px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: auto;
+    animation: fadeIn 0.8s ease-in-out;
+    padding: 20px 0;
+}
+
+.footer-bottom {
+    background: #111;
+    padding: 10px;
+    font-size: 14px;
+    color: #bbb;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+#featured-container {
+    display: flex;
+    flex-wrap: nowrap; /* ป้องกันการขึ้นบรรทัดใหม่ */
+    overflow-x: auto; /* เปิดให้เลื่อนแนวนอน */
+    gap: 15px; /* ระยะห่างระหว่างสินค้า */
+    padding: 10px;
+    scrollbar-width: none; /* ซ่อน scrollbar บน Firefox */
+    -ms-overflow-style: none; /* ซ่อน scrollbar บน IE/Edge */
+}
+
+/* ซ่อน scrollbar บน Chrome, Safari */
+#featured-container::-webkit-scrollbar {
+    display: none;
+}
+
+#featured-container .product {
+    flex: 0 0 auto;
+    width: 250px; /* กำหนดขนาดของสินค้า */
+    text-align: center;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ปรับขนาดสินค้าให้เล็กลงบนมือถือ */
+@media screen and (max-width: 600px) {
+    #featured-container .product {
+        width: 200px; /* ลดขนาดสินค้า */
+    }
+}
+/* กำหนด container ของสินค้าให้แสดงเป็น grid */
+#product-container, #featured-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* ระยะห่างระหว่างสินค้า */
+}
+
+/* กำหนดขนาดของสินค้า */
+.product {
+    width: 250px; /* ขนาดเท่ากันทุกสินค้า */
+    text-align: center;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	-webkit-box-shadow: inset 0px 0px 32px 6px rgba(115,109,115,0.53);
+	-moz-box-shadow: inset 0px 0px 32px 6px rgba(115,109,115,0.53);
+	box-shadow: inset 0px 0px 32px 6px rgba(115,109,115,0.53);
+
+}
+
+/* ปรับขนาดรูปภาพสินค้าให้เท่ากัน */
+.product img {
+    width: 100%;
+    height: 200px; /* ปรับให้รูปเท่ากัน */
+    object-fit: cover; /* ป้องกันรูปภาพผิดสัดส่วน */
+    border-radius: 8px;
+}
+
+/* ปรับขนาดสินค้าให้เหมาะสมกับหน้าจอเล็ก */
+@media screen and (max-width: 600px) {
+    .product {
+        width: 200px; /* ลดขนาดสินค้าในมือถือ */
+    }
+    .product img {
+        height: 150px; /* ลดขนาดรูปภาพในมือถือ */
+    }
+}

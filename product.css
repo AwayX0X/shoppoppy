@@ -65,3 +65,45 @@
 .btn:hover {
     background: #0056b3;
 }
+
+
+/* ปรับรายละเอียดสินค้าให้ไม่เกินหน้าจอบนมือถือ */
+@media screen and (max-width: 600px) {
+    .product-detail {
+        flex-direction: column; /* จัดเรียงแนวตั้ง */
+        align-items: center; /* จัดกึ่งกลาง */
+        width: 90%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .product-image img {
+        width: 100%; /* ทำให้รูปไม่เกินขอบจอ */
+        height: auto;
+    }
+
+    .product-info {
+        text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+        width: 100%;
+    }
+
+    .tabs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .tab-button {
+        flex: 1 1 50%; /* ให้ปุ่มอยู่ 2 อันต่อแถว */
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .tab-content {
+        padding: 10px;
+    }
+
+    .btn {
+        width: 100%; /* ปุ่มกดเต็มหน้าจอมือถือ */
+    }
+}

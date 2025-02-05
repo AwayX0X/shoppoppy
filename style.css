@@ -224,3 +224,52 @@ footer {
         height: 150px; /* ลดขนาดรูปภาพในมือถือ */
     }
 }
+/* 🔹 ปรับ Navbar ให้เป็นเมนูซ่อนเมื่ออยู่บนมือถือ */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 123, 255, 0.9);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 999;
+        padding: 15px 0;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        display: block;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+/* 🔹 ปรับสินค้าให้เหมาะกับมือถือ */
+@media screen and (max-width: 600px) {
+    .product {
+        width: 90%; /* ใช้เต็มพื้นที่ */
+    }
+
+    .product img {
+        height: 150px;
+    }
+
+    .category-selection select {
+        width: 100%;
+    }
+}
+
+/* 🔹 ปรับ Footer ให้เหมาะสมกับมือถือ */
+@media screen and (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}

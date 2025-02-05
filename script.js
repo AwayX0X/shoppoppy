@@ -9,6 +9,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        if (navLinks.style.display === "flex") {
+            navLinks.style.display = "none";
+        } else {
+            navLinks.style.display = "flex";
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
     console.log("✅ กำลังโหลดสินค้านำเสนอ...");
     if (typeof featuredProducts === "undefined") {
         console.error("❌ ไม่พบ featuredProducts ใน config.js");

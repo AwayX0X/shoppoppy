@@ -126,3 +126,18 @@
 .selected:hover {
     background: #f0f0f0;
 }
+/* 🔹 ปรับการแสดงผลของสินค้าสำหรับมือถือ */
+@media screen and (max-width: 600px) {
+    .product-list {
+        padding: 10px;
+    }
+
+    .product {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .select-container {
+        width: 90%;
+    }
+}
